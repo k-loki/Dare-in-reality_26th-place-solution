@@ -1,0 +1,18 @@
+=================gridsearch finished=================
+{'linearsvr__C': 1, 'linearsvr__dual': True, 'linearsvr__epsilon': 0.1, 'linearsvr__loss': 'epsilon_insensitive', 'linearsvr__tol': 0.001}
+-0.3073265719090502
+Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(n_jobs=-1, remainder='passthrough',
+                                   transformers=[('standardscaler',
+                                                  StandardScaler(),
+                                                  ['lap_number', 's1_large',
+                                                   's2_large', 's3_large']),
+                                                 ('onehotencoder',
+                                                  OneHotEncoder(sparse=False),
+                                                  ['driver_name', 'location',
+                                                   'event'])],
+                                   verbose=True)),
+                ('linearsvr',
+                 LinearSVR(C=1, epsilon=0.1, max_iter=100000, random_state=999,
+                           tol=0.001, verbose=1))])
+=================gridsearch finished=================
